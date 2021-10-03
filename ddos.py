@@ -17,7 +17,7 @@ from argparse import ArgumentParser,RawTextHelpFormatter
 if os.name == 'posix':
 	c = os.system('which pip')
 	if c == 256:
-		os.system('if [ -f /usr/bin/apt ]; then apt-get install python3-pip -y; else yum install python3-pip -y fi;')
+		os.system('if [ -f /usr/bin/apt ]; then apt-get install python3-pip -y; else yum install python3-pip -y; fi;')
 	else:
 		pass
 else:
@@ -338,14 +338,7 @@ def main():
 	parser = ArgumentParser(
         usage='./%(prog)s -t [target] -p [port] -t [number threads]',
         formatter_class=RawTextHelpFormatter,
-        prog='pyddos',
-        description=cprint(title,'white',attrs=['bold']),
-        epilog='''
-Example:
-    ./%(prog)s -d www.example.com -p 80 -T 2000 -Pyslow
-    ./%(prog)s -d www.domain.com -s 100 -Request
-    ./%(prog)s -d www.google.com -Synflood -T 5000 -t 10.0
-'''
+        prog='pyddos'
 )
 	options = parser.add_argument_group('options','')
 	options.add_argument('-d',metavar='<ip|domain>',default=False,help='Specify your target such an ip or domain name')
