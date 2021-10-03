@@ -15,7 +15,7 @@ from threading import *
 from argparse import ArgumentParser,RawTextHelpFormatter
 
 if os.name == 'posix':
-	c = os.system('which pip')
+	c = os.system('which pip3')
 	if c == 256:
 		os.system('if [ -f /usr/bin/apt ]; then apt-get install python3-pip -y; else yum install python3-pip -y; fi;')
 	else:
